@@ -30,7 +30,7 @@ mongoose.connect(process.env.MONGO_URI)
   .catch((err) => {
     console.error("❌ MongoDB connection error:", err);
   });
-
+console.log("URI =>", process.env.MONGO_URI);
 // Error handling middleware
 app.use((error, req, res, next) => {
   console.error('Unhandled error:', error);
